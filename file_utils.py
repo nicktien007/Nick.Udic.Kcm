@@ -2,9 +2,9 @@ import codecs
 import json
 
 
-def get_wiki_json(fileName):
-    with open("wiki/" + fileName, mode="r") as file:
-        # with open("wiki/wiki.json", mode="r") as file:
+def get_input_json(fileName):
+    with open("input/" + fileName, mode="r") as file:
+        # with open("input/input.json", mode="r") as file:
         return json.load(file)
 
 
