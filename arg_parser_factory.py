@@ -1,11 +1,10 @@
 from argparse import ArgumentParser, RawTextHelpFormatter
-from pathlib import Path
 
 
 def build():
     parser = ArgumentParser(
-        description="輸入 kcm 以進行KCM解析 => 範例：python3 main.py kcm ./Posseg_List9.json -output ./output_result.txt\n"
-                    "輸入 query 以進行關鍵字查詢 => 範例：python3 main.py query filepath -k 政府 -limit 15"
+        description='輸入 kcm 以進行KCM解析 => 範例：python3 main.py kcm ./Posseg_List9.json -output ./output_result.txt\n'
+                    '輸入 query 以進行關鍵字查詢 => 範例：python3 main.py query filepath -k 政府 -limit 15'
         , formatter_class=RawTextHelpFormatter)
 
     subcmd = parser.add_subparsers(

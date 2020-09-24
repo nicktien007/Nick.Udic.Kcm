@@ -1,7 +1,4 @@
 from file_utils import get_input_json, saveJson_writeline
-from time_utils import show_current_time
-import time
-
 
 
 def calc_kcm(filter_list):
@@ -32,7 +29,7 @@ def convert_kcm(input_path, output_path):
     input_json_data = get_input_json(input_path)
 
     for j in input_json_data.values():
-        exclude = ['/ns','nr','nz','nt','nw']
+        exclude = ['/ns', 'nr', 'nz', 'nt', 'nw']
         filter_list = list(filter(lambda x: "/n" in x and not any(y in x for y in exclude), j))
         # 空字典檢查
         query_dic = calc_kcm(filter_list)

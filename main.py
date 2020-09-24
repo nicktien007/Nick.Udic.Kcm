@@ -1,5 +1,5 @@
 import time
-import  Arg_Parser_Factory
+import arg_parser_factory
 
 import kcm_service
 from query_service import query_keyword_frompath
@@ -7,7 +7,7 @@ from time_utils import show_current_time
 
 if __name__ == '__main__':
 
-    args = Arg_Parser_Factory.build()
+    args = arg_parser_factory.build()
 
     # KCM轉換
     if args.subcmd == 'kcm':
