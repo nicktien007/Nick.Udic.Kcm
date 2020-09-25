@@ -131,3 +131,4 @@ dmypy.json
 output
 /.idea/
 /input/
+/DB/
