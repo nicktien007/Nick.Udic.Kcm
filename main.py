@@ -1,10 +1,10 @@
 import time
 import arg_parser_factory
 
-import kcm_service
-from query_service import query_keyword_frompath
+from service import kcm_service
+from service.query_service import query_keyword_from_path
 from time_utils import show_current_time
-import  file_utils
+
 if __name__ == '__main__':
     # begin = time.time()
     # file_utils.savedb()
@@ -25,5 +25,5 @@ if __name__ == '__main__':
     # 關鍵字查找
     if args.subcmd == 'query':
         print("查詢關鍵字, 查詢目標：" + args.path + ", 查詢關鍵字：" + args.keyword + ", 篩選筆數：" + str(args.limit))
-        r = query_keyword_frompath(args.path, args.keyword)
+        r = query_keyword_from_path(args.path, args.keyword, args.limit)
         print(r)

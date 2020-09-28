@@ -33,9 +33,7 @@ def savedb():
         for fLine in file:
             j = json.loads(fLine)
             for key, value in j.items():
-                # print('''INSERT INTO KCM2 (KEY,VALUE) VALUES ({key}, {value})'''.format(key=str(key), value=str(value)))
                 cursor.execute('INSERT INTO KCM (KEY,VALUE) VALUES ("{key}", "{value}")'.format(key=str(key), value=str(value)))
-                # print('INSERT INTO KCM (KEY,VALUE) VALUES ("{key}", "{value}")'.format(key=str(key), value=str(value)))
             db.commit()
 
     db.close()
